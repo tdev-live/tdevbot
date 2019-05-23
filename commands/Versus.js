@@ -6,6 +6,8 @@ const responder = (bot, chatter) => {
 
     if (vueCounter > reactCounter) {
         bot.say('VueJS wins! SeemsGood');
+    } else if (vueCounter === reactCounter) {
+        bot.say('Nobody wins! BloodTrail');
     } else {
         bot.say('ReactJS wins! NotLikeThis');
     }
