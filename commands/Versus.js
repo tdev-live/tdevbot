@@ -1,8 +1,8 @@
 const db = require('../database/db');
 
 const responder = (bot, chatter) => {
-    const vueCounter = db.get('vue.counter');
-    const reactCounter = db.get('react.counter');
+    const vueCounter = db.get('vue.counter').value();
+    const reactCounter = db.get('react.counter').value();
 
     if (vueCounter > reactCounter) {
         bot.say('VueJS wins! SeemsGood');
